@@ -59,9 +59,9 @@ const App = () => {
               >
                 <img src={`./src/assets/${Menu.src}.png`} />
                 <span className={`${!open && "hidden"} origin-left duration-200`}>
-                  <Link to={Menu.title === "Dashboard" ? "/Dashboard" 
+                  <Link to={Menu.title === "Dashboard" ? "/Dashboard"
                           : Menu.title === "New Booking" ? "/newbooking" 
-                          : `/${Menu.title.toLowerCase()}`} className="text-gray-300 hover:text-white">
+                          : `/${Menu.title.replace(/\s+/g, '').toLowerCase()}`} className="text-gray-300 hover:text-white">
                     {Menu.title}
                   </Link>
                 </span>
